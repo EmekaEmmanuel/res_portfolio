@@ -36,8 +36,6 @@ Basic portfolio website
 
 # 📖 [Portfolio Setup] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
 **[Portfolio Setup]** is a simple portfolio website with these sections contained in this project;
 - Toolbar
 - Headline section (right after the header).
@@ -58,9 +56,7 @@ The layout was done using css flexbox and css grid, button interactions implemen
   </ul>
 </details>
 
-## 🚀 Live Demo <a name="live-demo"></a> 
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+## 🚀 Live Demo <a name="live-demo"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
