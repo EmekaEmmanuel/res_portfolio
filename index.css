@@ -179,6 +179,8 @@
   align-items: left;
 }
 
+/* This is for float */
+
 .gridbox1 {
   float: none;
 }
