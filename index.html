@@ -12,55 +12,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg_color4">
 
-    <header class="header1">
+    <header class="bg_color7">
 
-        <h3 class="logo"><a href="#">My Logo</a></h3>
+        <div class="header1">
 
-        <nav>
+            <h3 class="logo"><a href="#">My Logo</a></h3>
 
-            <img src="./img/hamburger.png" alt="hamburger_image">
+            <nav class="nav1">
 
-        </nav>
+                <img src="./img/hamburger.png" alt="hamburger_image">
+
+            </nav>
+
+            <nav class="nav2">
+
+                <ul class="nav2 liststyle">
+                    <li class="list_style"> <a class="textdecoration" href="#">Portfolio</a></li>
+                    <li class="list_style"> <a class="textdecoration" href="#">About</a></li>
+                    <li class="list_style"><a class="textdecoration" href="#">Contact</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
 
     </header>
 
-    <section class="section1">
+    <section class="section1 bg_color7">
 
-        <div class="intro">
+        <article class="section1_box">
 
-            <h1>I'm Emeka Glad to see you!</h1>
+            <div class="intro">
 
-            <p>I'm a software developer! I can help you build a product, feature or website Look through some of my work
-                and experience! if you like what you see and have a project you need coded, don't hesistate to contact
-                me. </p>
+                <h1>I'm Emeka Glad to see you!</h1>
 
-        </div>
+                <p>I'm a software developer! I can help you build a product, feature or website Look through some of my
+                    work
+                    and experience! if you like what you see and have a project you need coded, don't hesistate to
+                    contact
+                    me. </p>
 
-        <div class="socialmedia_connect intro">
+            </div>
 
-            <h5>LET'S CONNECT</h5>
+            <div class="socialmedia_connect intro">
 
-            <ul>
+                <h5>LET'S CONNECT</h5>
 
-                <li><a href="#"><img src="./img/angular.jpg" alt="angular_image"></a></li>
-                <li><a href="#"><img src="./img/github.jpg" alt="github_image"></a></li>
-                <li><a href="#"><img src="./img/Linkedin.jpg" alt="Linkedin_image"></a></li>
-                <li><a href="#"><img src="./img/mee.jpg" alt="mee_image"></a></li>
-                <li><a href="#"><img src="./img//twitter.jpg" alt="twitter_image"></a></li>
+                <ul>
 
-            </ul>
+                    <li><a href="#"><img src="./img/angular.jpg" alt="angular_image"></a></li>
+                    <li><a href="#"><img src="./img/github.jpg" alt="github_image"></a></li>
+                    <li><a href="#"><img src="./img/Linkedin.jpg" alt="Linkedin_image"></a></li>
+                    <li><a href="#"><img src="./img/mee.jpg" alt="mee_image"></a></li>
+                    <li><a href="#"><img src="./img//twitter.jpg" alt="twitter_image"></a></li>
 
-        </div>
+                </ul>
+
+            </div>
+
+        </article>
 
     </section>
 
     <section class="works_section">
 
-        <article class="article1">
+        <article class="article1 bg_color7">
 
-            <figure>
+            <figure class="figure1">
 
                 <a href="#"><img src="./img/jumbo1.jpg" alt="jumbo1_img"></a>
 
@@ -217,7 +237,7 @@
 
         <div class="about_self_section_box">
 
-            <h3><a class="textdecoration font7" href="#">About <br/> Myself </a></h3>
+            <h3><a class="textdecoration font7" href="#">About <br /> Myself </a></h3>
 
             <p>Hello I'm a software developer! I can help you build a product, feature or website Look through some of
                 my work and experience! if you like what you see and have a project you need coded, don't hesistate to
@@ -290,26 +310,55 @@
 
     </section>
 
-    <footer>
-        <div class="flex-container">
-            <div class="flex-item">
-                <h2 class="">Contact Me</h2>
-            </div>
-            <div class="flex-item">
-                <p>
-                    If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I'd love to help with it
-                </p>
-            </div>
-            <div class="flex-item">
-                <form action="">
-                    <input type="text" name="name">
-                    <input type="email" name="email">
-                    <textarea name="details" id="" cols="30" rows="10"></textarea>
-                    <button>Get It Touch</button>
+    <section class="bg_color7">
+
+        <article class="contact_section">
+
+            <div class="contact_form">
+
+                <header>
+                    <h3>Contact me</h3>
+                </header>
+
+                <p>If you have an application you are interested in developing, a feature that you need built or a
+                    project that needs coding. I’d love to help with it </p>
+
+                <form action="https://formspree.io/f/xdojpwrd" method="POST">
+
+                    <fieldset class="contact_info">
+
+                        <label>
+                            <input class="input1" maxlength="30" type="text" placeholder="Yeremias" id="" value=""
+                                name="name" required>
+                        </label>
+
+                        <label>
+                            <input class="input1" type="email" placeholder="natajayanj14@gmail.com" id="email" value=""
+                                name="email" required>
+                        </label>
+
+                        <label>
+                            <textarea class="textarea1" placeholder="Write your message here" name="text_message" id=""
+                                maxlength="500" cols="10" rows="5" required></textarea>
+                        </label>
+
+                    </fieldset>
+
+                    <fieldset class="contact_action">
+
+                        <label>
+                            <input class="btn_1" id="" type="submit" value="Get In Touch">
+                        </label>
+
+                    </fieldset>
+
                 </form>
+
             </div>
-        </div>
-    </footer>
+
+        </article>
+
+    </section>
 
 </body>
 
