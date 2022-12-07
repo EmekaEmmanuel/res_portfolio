@@ -18,7 +18,7 @@
   font-weight: 700;
   font-style: bold;
   font-size: 18px;
-  line-height: 20px; 
+  line-height: 20px;
   animation-duration: 4s;
   animation-name: rotate360;
   animation-iteration-count: 1;
@@ -150,13 +150,6 @@
 
 .show2 {
   display: none;
-}
-
-.article1div,
-.article2div,
-.article3div,
-.article4div {
-  padding: 16px 0;
 }
 
 .article1div,
@@ -381,7 +374,6 @@
   font-weight: 700;
 }
 
-/*  */
 .contact_section {
   padding: 150px 0 20px 0;
   border-top-left-radius: 100px;
@@ -434,8 +426,7 @@ label {
   padding: 15px;
   outline: none;
   border-radius: 10px;
-  border: 1px solid #CFD8DC;
-
+  border: 1px solid #cfd8dc;
 }
 
 .input1::placeholder {
@@ -460,7 +451,7 @@ label {
   padding: 10px 15px;
   outline: none;
   border-radius: 10px;
-  border: 1px solid #CFD8DC;
+  border: 1px solid #cfd8dc;
 }
 
 .textarea1::placeholder {
