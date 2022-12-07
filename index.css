@@ -434,6 +434,8 @@ label {
   padding: 15px;
   outline: none;
   border-radius: 10px;
+  border: 1px solid #CFD8DC;
+
 }
 
 .input1::placeholder {
@@ -458,6 +460,7 @@ label {
   padding: 10px 15px;
   outline: none;
   border-radius: 10px;
+  border: 1px solid #CFD8DC;
 }
 
 .textarea1::placeholder {
