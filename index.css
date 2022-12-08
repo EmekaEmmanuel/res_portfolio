@@ -472,7 +472,6 @@ label {
 }
 
 @media only screen and (min-width: 425px) {
-
   .article1,
   .article2,
   .article3,
@@ -526,7 +525,6 @@ label {
     width: 100%;
     border-bottom-left-radius: 100px;
     padding: 30px 0 0 0;
-
   }
 
   .section1_box {
@@ -830,7 +828,6 @@ label {
 }
 
 @media only screen and (min-width: 1024px) {
-
   .article1div p,
   .article2div p,
   .article3div p,
