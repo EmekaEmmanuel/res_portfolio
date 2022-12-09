@@ -536,9 +536,12 @@ label {
   }
 
   .section1_box .intro {
-    padding: 150px 0 0 0;
     width: 80%;
     margin: auto;
+  }
+
+  .intro3 {
+    padding: 100px 0 0 0;
   }
 
   .section1_box .socialmedia_connect {
@@ -554,7 +557,7 @@ label {
     line-height: 60px;
     letter-spacing: 0.37px;
     font-weight: 700;
-    width: 420px;
+    width: 395px;
     padding-bottom: 10px;
   }
 
@@ -718,7 +721,7 @@ label {
   .about_width1 {
     width: 40%;
   }
-
+  
   .about_self_section h3 {
     padding: 0 0 20px 0;
     width: 170px;
@@ -738,10 +741,10 @@ label {
   }
 
   .font7 {
-    color: #091e42;
+    color:#091E42;
     font-size: 40px;
     align-items: left;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 24px;
   }
 
@@ -759,7 +762,8 @@ label {
     font-size: 16px;
     font-size: 1.44vw;
     line-height: 24px;
-    font-weight: 400;
+    font-weight: 600;
+    width: 300px;
   }
 
   .about_section_flex3 {
@@ -794,15 +798,15 @@ label {
     padding: 150px 0 20px 0;
     border-top-left-radius: 100px;
     display: flex;
-    justify-content: center;
-    background: linear-gradient(rgba(96, 112, 255, 0.85), rgba(96, 112, 255, 0.85)), url(./img/background4.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    justify-content: center; 
+    background: url(./img//background4.png);
+    background-color: #6070ff;
+    background-size: 100%;
+    background-repeat: no-repeat;  
   }
 
   .contact_form {
-    width: 70%;
+    width: 65%;
     margin: auto;
   }
 
@@ -847,7 +851,7 @@ label {
     justify-content: center;
     padding: 5px 0;
     gap: 35px;
-    width: 100%;
+    width: 75%;
     margin: auto;
     border-radius: 20px;
     margin-top: 20px;
@@ -874,6 +878,20 @@ label {
     width: 70%;
     margin: auto;
   }
+
+  .about_self_section p {
+    color: #344563;
+    font-size: 16px;
+    font-size: 1.44vw;
+    line-height: 24px;
+    font-weight: 400;
+    width: 390px;
+  }
+
+  .contact_form {
+    width: 47%;
+    margin: auto;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -896,6 +914,34 @@ label {
   .section1_box .socialmedia_connect {
     justify-content: center;
     width: 60%;
+    margin: auto;
+  }
+
+  .works_section .article1,
+  .works_section .article2,
+  .works_section .article3,
+  .works_section .article4 {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    gap: 35px;
+    width: 55%;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+
+  .about_self_section p {
+    color: #344563;
+    font-size: 16px;
+    font-size: 1.44vw;
+    line-height: 24px;
+    font-weight: 400;
+    width: 490px;
+  }
+
+  .contact_form {
+    width: 34%;
     margin: auto;
   }
 }
