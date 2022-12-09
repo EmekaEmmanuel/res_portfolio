@@ -5,6 +5,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.button {
+  text-decoration: none;
+}
+
 .header1 {
   display: flex;
   justify-content: space-between;
