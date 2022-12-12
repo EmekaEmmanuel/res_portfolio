@@ -57,7 +57,8 @@ Use media queries to make sure that website displays correctly on desktop screen
   </ul>
 </details>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo">https://emekaemmanuel.github.io/res_portfolio/</a>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
