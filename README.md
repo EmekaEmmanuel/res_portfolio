@@ -41,13 +41,14 @@ Basic portfolio website
 - Headline section (right after the header).
 - Works
 - About myself
+- Contact me
 The layout was done using css flexbox and css grid, button interactions implemented.
+Use media queries to make sure that website displays correctly on desktop screens. (Desktop: 768px or wider).
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -63,7 +64,8 @@ The layout was done using css flexbox and css grid, button interactions implemen
 ## 💻 Getting Started <a name="getting-started"></a>  
 
 ### Prerequisites
-- A text editor(preferably Visual Studio Code)
+- A text editor (preferably Visual Studio Code)
+- Github
 
 ### Setup
 
