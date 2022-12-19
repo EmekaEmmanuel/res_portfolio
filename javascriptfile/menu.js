@@ -1,7 +1,6 @@
-let hamburger_btn = document.querySelector(".hamburger_img")
-let close_hamburger_btn = document.querySelector(".close_hamburger")
-let modal_menu_container = document.querySelector(".modal_menu_container") 
-let menu_option = document.querySelector(".menu_option") 
+let hamburger_btn = document.querySelector(".hamburger_img");
+let close_hamburger_btn = document.querySelector(".close_hamburger");
+let modal_menu_container = document.querySelector(".modal_menu_container");  
 
 
 
@@ -16,5 +15,4 @@ const closeMobileMenu = e => {
 }
 
 hamburger_btn.addEventListener("click", openMobileMenu);
-close_hamburger_btn.addEventListener("click", closeMobileMenu);
-menu_option.addEventListener("click", closeMobileMenu);
+close_hamburger_btn.addEventListener("click", closeMobileMenu); 
