@@ -102,9 +102,6 @@
   text-decoration: none;
 }
 
-
-/* BEFORE MODAL  MENU */
-
 .modal_menu_container {
   width: 100%;
   background-color: #6070ffef;
@@ -134,34 +131,16 @@
 }
 
 .close_hamburger {
-  background-color: #6070FF;
+  background-color: #6070ff;
+  border: none;
 }
 
 .font1c {
   width: 251px;
-  color: #FFFFFF;
+  color: #fff;
   font-size: 32px;
   font-weight: 600;
   line-height: 52px;
-
-
-  /* X: 0px
-Y: 8px
-W: 251px
-H: 24px
-X constraint: Left and right
-Y constraint: Center
-Text style: Theme 1 / H3
-Font family: Poppins
-Font style: SemiBold
-Font size: 32px
-Line height: 44px
-Line height: 92%
-Align: Left
-Vertical align: Center
-Fill Color Style: Theme 1 / Neutrals 11
-Fill: Solid */
-
 }
 
 .list_none {
@@ -176,7 +155,6 @@ Fill: Solid */
   display: block;
 }
 
-/* END OF MODAL MENU */
 .works_section {
   background-color: #f4f5f7;
   display: grid;
@@ -563,6 +541,11 @@ label {
 @media only screen and (min-width: 425px) {
   .section1 {
     border-bottom-left-radius: 100px;
+  }
+
+  .modal_menu_article {
+    width: 90%;
+    margin: auto;
   }
 
   .article1,
