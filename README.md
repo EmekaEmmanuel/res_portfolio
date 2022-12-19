@@ -45,7 +45,7 @@ Basic portfolio website
 - Contact me
 The layout was done using css flexbox and css grid, button interactions implemented.
 Use media queries to make sure that website displays correctly on desktop screens. (Desktop: 768px or wider).
-
+- Implement the mobile menu using basic javascript.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -54,7 +54,7 @@ Use media queries to make sure that website displays correctly on desktop screen
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="#">HTML AND CSS</a></li>
+    <li><a href="#">HTML CSS AND JAVASCRIPT</a></li>
   </ul>
 </details>
 
@@ -111,6 +111,9 @@ Contributions, issues, and feature requests are welcome!
 > 👤 **Marko Kermichiev**
 > - GitHub: [@Markokermi](https://github.com/MarkoKermi)
 >- LinkedIn: [LinkedIn](https://www.linkedin.com/in/marko-kermichiev-78b1bb110/
+
+> 👤 **Bader Basem Simon**
+> - GitHub: [@Markokermi](https://github.com/BB-Simon) 
 )
 
 Feel free to check the [issues page](../../issues/https://github.com/EmekaEmmanuel/res_portfolio/issues).
