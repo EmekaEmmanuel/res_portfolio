@@ -1,15 +1,20 @@
 let hamburger_btn = document.querySelector(".hamburger_img")
 let close_hamburger_btn = document.querySelector(".close_hamburger")
-let modal_menu_container = document.querySelector(".hamburger_img")
+let modal_menu_container = document.querySelector(".modal_menu_container") 
+let menu_option = document.querySelector(".menu_option") 
 
-hamburger_btn.addEventListener("click", openMobileMenu);
-close_hamburger_btn.addEventListener("click", closeMobileMenu);
+
 
 const openMobileMenu = e => {
   e.preventDefault();
-  modal_menu_container.classList.add('block1')
+  modal_menu_container.classList.remove('hide1') 
 }
+
 const closeMobileMenu = e => {
   e.preventDefault()
-  modal_menu_container.classList.remove('block1')
+  modal_menu_container.classList.add('hide1') 
 }
+
+hamburger_btn.addEventListener("click", openMobileMenu);
+close_hamburger_btn.addEventListener("click", closeMobileMenu);
+menu_option.addEventListener("click", closeMobileMenu);
