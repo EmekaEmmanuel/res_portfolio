@@ -2,7 +2,7 @@ const hamburger = document.querySelector('.hamburger_img');
 const closeHamburgerBtn = document.querySelector('.close_hamburger');
 const modalMenuContainer = document.querySelector('.modal_menu_container');
 const menuOption = document.querySelectorAll('.menu_option');
-
+const seeProjectDetailsBtn = document.querySelector('#see-projects-btn');
 
 const projectArr = [
   {
@@ -144,6 +144,15 @@ menuOption.forEach((e) => {
     modalMenuContainer.classList.toggle('hide1');
   };
 });
+  
+const openProjectDetailsModal = e => {
+  e.preventDefault();
+  const body = document.body;
+  // i.e below
+  // const detailsModal = document.querySelector('details-modal');
+  // body.appendChild()
+}
+seeProjectDetailsBtn.addEventListener('click', openProjectDetailsModal)
 
 
 let myCard = '';
