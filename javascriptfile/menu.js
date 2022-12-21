@@ -72,14 +72,6 @@ menuOption.forEach((e) => {
     modalMenuContainer.classList.toggle('hide1');
   };
 });
-  
-// const openProjectDetailsModal = e => {
-//   e.preventDefault();
-//   const body = document.body; 
-// }
-// seeProjectDetailsBtn.addEventListener('click', openProjectDetailsModal)
-
-
 
 let displayCard = ""
 for (let i = 0; i < cardsData.length; i++) {
@@ -165,7 +157,7 @@ for (let i = 0; i < cardsData.length; i++) {
 
                 </ul>
 
-                <button type="submit" indexBtn=${cardsData[i]}><a class="font5 textdecoration" href="#">See Project</a></button>
+                <button class="font5 textdecoration seepopup" type="submit" index=${cardsData[i]}>See Project</button>
 
             </div>
 
@@ -180,4 +172,92 @@ worksSection.innerHTML=displayCard
 console.log(worksSection);
 console.log(cardsData);
 
+const displayPopup = () => {
+  const showPopupBtn = document.querySelectorAll('.seepopup');
+  const popUpContainer = document.createElement('section');
+  popUpContainer.className = "popupsection"
+  showPopupBtn.forEach((e) => {
+e.addEventListener("click", () => {
+  e.preventDefault();
+  const btnIndex = e.getAttribute("index")
+  let popupEle = popupContent(cardsData[btnIndex]) 
+  const body = document.body;  
+  body.append(popUpContainer); 
+  const popUpBox = document.querySelector('.popupsection'); 
+  popUpBox.innerHTML = popupEle; 
+  const closePopup = document.querySelectorAll('.close-popup');
+      closePopup.forEach((e) => {
+        e.addEventListener('click', () => {
+          popUpContainer.remove(); 
+        });
+      });
+    })
+})
+}
 
+displayPopup()
+
+
+
+// const showModal = () => {
+//   const btn = document.querySelectorAll('.work-btn');
+//   const modalContainer = document.createElement('section');
+//   modalContainer.className = 'modal-container';
+//   const modalMobile = document.createElement('section');
+//   modalMobile.className = 'modal-container-mobile';
+//   btn.forEach((e) => {
+//     e.addEventListener('click', () => {
+//       const index = e.getAttribute('ownIndex');
+//       const forLaptop = modalElem(projectArr[index]);
+//       const forMobile = modalMob(projectArr[index]);
+//       const body = document.querySelector('body');
+//       body.append(modalContainer);
+//       body.append(modalMobile);
+//       const modalContain = document.querySelector('.modal-container');
+//       const mobileContain = document.querySelector('.modal-container-mobile');
+//       mobileContain.innerHTML = forMobile;
+//       modalContain.innerHTML = forLaptop;
+//       const closeModal = document.querySelectorAll('.close-modal');
+//       closeModal.forEach((e) => {
+//         e.addEventListener('click', () => {
+//           modalMobile.remove();
+//           modalContain.remove();
+//         });
+//       });
+//     });
+//   });
+// };
+// showModal();
+
+
+
+
+const popupContent = (arr) => `
+ <div class="modal-body">
+        <figure class="close-img">
+          <img class="close-modal" src="./img/close-x.png" alt="" />
+        </figure>
+        <figure class="modal-img">
+          <img class="img-file" src="./img/card1.png" alt="" />
+        </figure>
+        <div class="modal-tittle">
+          <div class="heading">
+            <h2>${arr.name}</h2>
+          </div>
+          <div class="modal-btns">
+            <a href="" target="_blank"><button>See Live <img src="./img/see-live.png" alt=""></i></button></a>
+            <a href="" target="_blank"><button>See Source <img src="./img/gh.png" alt="github"></button></a>
+          </div>
+        </div>
+        <div class="technologies">
+          <ul>
+          ${uList}
+          </ul>
+        </div>
+        <div class="desc">
+          <p>
+            ${arr.description}
+          </p>
+        </div>
+      </div>
+`;
