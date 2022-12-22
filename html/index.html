@@ -214,7 +214,7 @@
                 <p>If you have an application you are interested in developing, a feature that you need built or a
                     project that needs coding. I’d love to help with it </p>
 
-                <form action="https://formspree.io/f/xdojpwrd" method="POST">
+                <form id="form_fields" action="https://formspree.io/f/xdojpwrd" method="POST">
 
                     <fieldset class="contact_info">
 
@@ -230,14 +230,16 @@
 
                         <label>
                             <textarea class="textarea1" placeholder="Write your message here" name="text_message"
-                                id="textarea1" maxlength="500" cols="10" rows="5" required></textarea>
+                                id="text_message" maxlength="500" cols="10" rows="5" required></textarea>
                         </label>
 
                     </fieldset>
 
+
+
                     <fieldset class="contact_action">
 
-                        <label>
+                        <label for="form_error" class="errorMsg">
                             <input class="btn_1" id="btn_1" type="submit" value="Get In Touch">
                         </label>
 

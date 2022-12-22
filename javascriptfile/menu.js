@@ -3,6 +3,13 @@ const closeHamburgerBtn = document.querySelector('.close_hamburger');
 const modalMenuContainer = document.querySelector('.modal_menu_container');
 const menuOption = document.querySelectorAll('.menu_option');
 const worksSection = document.querySelector('.works_section');
+const form = document.querySelector('form');
+const button = document.querySelector('#btn_1');
+const message = document.querySelector('.errorMsg');
+let fName = document.querySelector('#name');
+let email = document.querySelector('#email');
+const emailValue = document.querySelector('#email').value;
+let textArea = document.querySelector('#text_message');
 
 const cardsData = [
   {
@@ -70,6 +77,45 @@ menuOption.forEach((e) => {
   e.onclick = () => {
     modalMenuContainer.classList.toggle('hide1');
   };
+});
+
+const formChangeEvents = [fName, email, textArea];
+formChangeEvents.forEach((eachField) => {
+  eachField.addEventListener('change', () => {
+    const formDataObject = {
+      nameKey: fName.value,
+      emailKey: email.value,
+      textAreaKey: textArea.value,
+    };
+    localStorage.setItem('formValues', JSON.stringify(formDataObject));
+  });
+});
+
+window.addEventListener('load', () => {
+  const formInfo = JSON.parse(localStorage.getItem('formValues'));
+  if (formInfo) {
+    fName = formInfo.nameKey;
+    email = formInfo.emailKey;
+    textArea = formInfo.textAreaKey;
+  } else {
+    fName.value = '';
+    email.value = '';
+    textArea.value = '';
+  }
+});
+
+button.addEventListener('click', (e) => {
+  const regEx = /^([a-z0-9_\-.]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
+
+  const emailMatched = emailValue.match(regEx);
+  if (emailMatched) {
+    message.innerHTML = '';
+    form.submit();
+    localStorage.removeItem('formValues');
+  } else {
+    e.preventDefault();
+    message.innerHTML = 'Enter fields correctly; email pattern in lowercase only';
+  }
 });
 
 let displayCard = '';
@@ -280,9 +326,6 @@ showPopupBtn.forEach((e) => {
         </div>
        
     </article>
- 
-
-    
 
 </div>
 
@@ -300,47 +343,4 @@ showPopupBtn.forEach((e) => {
       });
     });
   });
-});
-
-
-// FORM VALIDATION
-
-button.addEventListener('click', (e) => {
-  const regEx = /^([a-z0-9_\-.]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
-  const emailInput = document.querySelector('#email');
-  const email = emailInput.value;
-  if (email.match(regEx)) {
-    message.innerHTML = '';
-    form.submit();
-    localStorage.removeItem('formValues');
-  } else {
-    e.preventDefault();
-    message.innerHTML = 'Please enter correct email pattern in lowercase letters only';
-  }
-});
-
-const inputs = form.elements;
-const inputArr = [inputs[0], inputs[1], inputs[2]];
-inputArr.forEach((e) => {
-  e.addEventListener('change', () => {
-    const formObj = {
-      name: inputArr[0].value,
-      email: inputArr[1].value,
-      message: inputArr[2].value,
-    };
-    localStorage.setItem('formValues', JSON.stringify(formObj));
-  });
-});
-
-window.addEventListener('load', () => {
-  const formInfo = JSON.parse(localStorage.getItem('formValues'));
-  if (formInfo) {
-    inputArr[0].value = formInfo.name;
-    inputArr[1].value = formInfo.email;
-    inputArr[2].value = formInfo.message;
-  } else {
-    inputArr[0].value = '';
-    inputArr[1].value = '';
-    inputArr[2].value = '';
-  }
 });
