@@ -746,7 +746,7 @@ label {
     padding: 0 0 0 0;
   }
 
-  .popup_section { 
+  .popup_section {
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -768,10 +768,10 @@ label {
     margin: auto;
     display: block;
     padding: 5px 0;
-    border-radius: 20px; 
+    border-radius: 20px;
   }
 
-  .popup_articlediv {  
+  .popup_articlediv {
     padding: 30px 20px;
   }
 
@@ -804,6 +804,7 @@ label {
   .footer_btn img {
     width: 18px;
     height: 20px;
+
     /* object-fit: cover; */
   }
 
@@ -1097,7 +1098,7 @@ label {
     font-weight: 400;
   }
 
-  .popup_section { 
+  .popup_section {
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -1119,7 +1120,7 @@ label {
     margin: auto;
     display: block;
     padding: 5px 0;
-    border-radius: 20px; 
+    border-radius: 20px;
   }
 
   /* .popup_section .popup_article {
@@ -1218,7 +1219,7 @@ label {
     margin-top: 20px;
   }
 
-  .popup_section { 
+  .popup_section {
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -1240,7 +1241,7 @@ label {
     margin: auto;
     display: block;
     padding: 5px 0;
-    border-radius: 20px; 
+    border-radius: 20px;
   }
 
   /* .popup_articlediv {
