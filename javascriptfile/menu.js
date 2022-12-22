@@ -9,7 +9,7 @@ const cardsData = [
     id: 0,
     name: ['Tonic', 'Tonic'],
     description: [
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.', 'A daily selection of privately personalized reads; no accounts or sign-ups required.'],
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. Lorem Ipsum is simply dummy text of the printing and typesetting industry. A daily selection of privately personalized reads; no accounts or sign-ups required.', 'A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.'],
     image: ['../img/jumbo1.jpg', '../img/jumbo5.png'],
     technologies: ['html', ' css ', 'javaScript'],
     technologiesDesk: ['html', 'Ruby on rails', 'css', 'javaScript'],
@@ -22,7 +22,7 @@ const cardsData = [
     id: 1,
     name: ['Multi-Post Stories', 'Multi-Post Stories'],
     description: [
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.', 'A daily selection of privately personalized reads; no accounts or sign-ups required.', 'Experimental content creation feature that allows users to add to an existing story over the course a day without spamming their friends.'],
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.', 'A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.'],
     image: ['../img/jumbo4.jpg', '../img/jumbo4b.jpg'],
     technologies: ['html', ' css ', 'javaScript'],
     technologiesDesk: ['html', 'Ruby on rails', 'css', 'javaScript'],
@@ -35,7 +35,7 @@ const cardsData = [
     id: 2,
     name: ['Tonic', 'Facebook 360'],
     description:
-      ['A daily selection of privately personalized reads; no accounts or sign-ups required.', "Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR..."],
+      ['A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.', "Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR... Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR..."],
     image: ['../img/jumbo3.jpg', '../img/jumbo1b.png'],
     technologies: ['html', ' css ', 'javaScript'],
     technologiesDesk: ['html', 'Ruby on rails', 'css', 'javaScript'],
@@ -48,7 +48,7 @@ const cardsData = [
     id: 3,
     name: ['Multi-Post Stories', 'Uber Navigation'],
     description:
-      ['A daily selection of privately personalized reads; no accounts or sign-ups required.', 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.'],
+      ['A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.', 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car. A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.'],
     image: ['../img/jumbo4.jpg', '../img/jumbo2b.png'],
     technologies: ['html', ' css ', 'javaScript'],
     technologiesDesk: ['html', 'Ruby on rails', 'css', 'javaScript'],
@@ -106,7 +106,7 @@ for (let i = 0; i < cardsData.length; i += 1) {
                 </ul> 
 
 
-                <p>${cardsData[i].description[0]}</p>
+                <p>${cardsData[i].description[0].substring(0,85)}</p>
 
                 <ul class="gridbox1">
 
@@ -289,6 +289,7 @@ showPopupBtn.forEach((e) => {
 </article>
 `;
 
+
     const body = document.querySelector('body');
     body.appendChild(popUpContainer);
     const popUpBox = document.querySelector('.popup_section');
@@ -301,6 +302,46 @@ showPopupBtn.forEach((e) => {
     });
   });
 });
-// }
 
-// displayPopup()
+
+
+
+button.addEventListener('click', (e) => {
+  const regEx = /^([a-z0-9_\-.]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
+  const emailInput = document.querySelector('#email');
+  const email = emailInput.value;
+  if (email.match(regEx)) {
+    message.innerHTML = '';
+    form.submit();
+    localStorage.removeItem('formValues');
+  } else {
+    e.preventDefault();
+    message.innerHTML = 'Please enter correct email pattern in lowercase letters only';
+  }
+});
+
+const inputs = form.elements;
+const inputArr = [inputs[0], inputs[1], inputs[2]];
+inputArr.forEach((e) => {
+  e.addEventListener('change', () => {
+    const formObj = {
+      name: inputArr[0].value,
+      email: inputArr[1].value,
+      message: inputArr[2].value,
+    };
+    localStorage.setItem('formValues', JSON.stringify(formObj));
+  });
+});
+
+window.addEventListener('load', () => {
+  const formInfo = JSON.parse(localStorage.getItem('formValues'));
+  if (formInfo) {
+    inputArr[0].value = formInfo.name;
+    inputArr[1].value = formInfo.email;
+    inputArr[2].value = formInfo.message;
+  } else {
+    inputArr[0].value = '';
+    inputArr[1].value = '';
+    inputArr[2].value = '';
+  }
+});

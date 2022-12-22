@@ -391,6 +391,9 @@
   font-weight: 500;
 }
 
+.footer_btn {
+  color: #396DF2;
+}
 .works_article button,
 .popup_article .footer_btn,
 .about_self_section button,
@@ -739,7 +742,7 @@ label {
   }
 
   .popup_articlediv {
-    width: 95%;
+    width: 90%;
     margin: auto;
     padding-top: 20px;
   }
@@ -778,19 +781,20 @@ label {
   .popup_flex2 .gridbox2 {
     display: grid;
     align-items: center;
-    gap: 30px 18px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 14px);
+    gap: 30px 10px;
+    grid-column: 1;
+    grid-template-columns: 45px 45px 75px; 
+    grid-template-rows: repeat(3, 10px);
   }
 
   .popup_flex2 div footer {
     display: flex;
-    gap: 10px;
+    gap: 5px;
   }
 
   .popup_articlediv p {
     color: #344563;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 30px;
     font-weight: 500;
     width: 85%;
@@ -806,8 +810,9 @@ label {
   }
 
   .popup_article .figure2 img {
-    height: 510px;
-    object-fit: contain;
+    width:580px;
+    height: 300px;
+    object-fit: cover;
     object-position: center;
   }
 
@@ -1075,9 +1080,9 @@ label {
   }
 
   .popup_articlediv {
-    width: 90%;
+    width: 75%;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 0px;
   }
 
   .footer_btn img {
@@ -1086,8 +1091,9 @@ label {
   }
 
   .popup_article .figure2 img {
-    height: 582px;
-    object-fit: contain;
+    width: 582px;
+    height: 300px;
+    object-fit: cover; 
     object-position: center;
   }
 
@@ -1159,20 +1165,21 @@ label {
   }
 
   .popup_articlediv {
-    width: 90%;
+    width: 55%;
     margin: auto;
     padding-top: 20px;
+  }
+
+  .popup_article .figure2 img {
+    width:590px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .footer_btn img {
     width: 14px;
     height: 17px;
-  }
-
-  .popup_article .figure2 img {
-    height: 582px;
-    object-fit: contain;
-    object-position: center;
   }
 
   .about_self_section p {
