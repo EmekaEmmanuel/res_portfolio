@@ -106,7 +106,7 @@ for (let i = 0; i < cardsData.length; i += 1) {
                 </ul> 
 
 
-                <p>${cardsData[i].description[0].substring(0,85)}</p>
+                <p>${cardsData[i].description[0].substring(0, 85)}</p>
 
                 <ul class="gridbox1">
 
@@ -289,7 +289,6 @@ showPopupBtn.forEach((e) => {
 </article>
 `;
 
-
     const body = document.querySelector('body');
     body.appendChild(popUpContainer);
     const popUpBox = document.querySelector('.popup_section');
@@ -301,47 +300,4 @@ showPopupBtn.forEach((e) => {
       });
     });
   });
-});
-
-
-
-
-button.addEventListener('click', (e) => {
-  const regEx = /^([a-z0-9_\-.]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
-  const emailInput = document.querySelector('#email');
-  const email = emailInput.value;
-  if (email.match(regEx)) {
-    message.innerHTML = '';
-    form.submit();
-    localStorage.removeItem('formValues');
-  } else {
-    e.preventDefault();
-    message.innerHTML = 'Please enter correct email pattern in lowercase letters only';
-  }
-});
-
-const inputs = form.elements;
-const inputArr = [inputs[0], inputs[1], inputs[2]];
-inputArr.forEach((e) => {
-  e.addEventListener('change', () => {
-    const formObj = {
-      name: inputArr[0].value,
-      email: inputArr[1].value,
-      message: inputArr[2].value,
-    };
-    localStorage.setItem('formValues', JSON.stringify(formObj));
-  });
-});
-
-window.addEventListener('load', () => {
-  const formInfo = JSON.parse(localStorage.getItem('formValues'));
-  if (formInfo) {
-    inputArr[0].value = formInfo.name;
-    inputArr[1].value = formInfo.email;
-    inputArr[2].value = formInfo.message;
-  } else {
-    inputArr[0].value = '';
-    inputArr[1].value = '';
-    inputArr[2].value = '';
-  }
 });

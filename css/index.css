@@ -392,8 +392,9 @@
 }
 
 .footer_btn {
-  color: #396DF2;
+  color: #396df2;
 }
+
 .works_article button,
 .popup_article .footer_btn,
 .about_self_section button,
@@ -783,7 +784,7 @@ label {
     align-items: center;
     gap: 30px 10px;
     grid-column: 1;
-    grid-template-columns: 45px 45px 75px; 
+    grid-template-columns: 45px 45px 75px;
     grid-template-rows: repeat(3, 10px);
   }
 
@@ -810,7 +811,7 @@ label {
   }
 
   .popup_article .figure2 img {
-    width:580px;
+    width: 580px;
     height: 300px;
     object-fit: cover;
     object-position: center;
@@ -1082,7 +1083,7 @@ label {
   .popup_articlediv {
     width: 75%;
     margin: auto;
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   .footer_btn img {
@@ -1093,7 +1094,7 @@ label {
   .popup_article .figure2 img {
     width: 582px;
     height: 300px;
-    object-fit: cover; 
+    object-fit: cover;
     object-position: center;
   }
 
@@ -1170,16 +1171,16 @@ label {
     padding-top: 20px;
   }
 
-  .popup_article .figure2 img {
-    width:590px;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
-  }
-
   .footer_btn img {
     width: 14px;
     height: 17px;
+  }
+
+  .popup_article .figure2 img {
+    width: 590px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .about_self_section p {
