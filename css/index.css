@@ -218,6 +218,11 @@
   transform: rotate(90deg);
 }
 
+.footer_btn img {
+  width: 20px;
+  height: 18px;
+}
+
 .popup_article .figure1 img {
   text-align: center;
   width: 340px;
@@ -402,11 +407,6 @@
   padding: 7px 4px;
   width: 130px;
   height: 40px;
-}
-
-.footer_btn img {
-  width: 20px;
-  height: 18px;
 }
 
 .works_article button,
@@ -1084,7 +1084,6 @@ label {
     width: 70%;
     margin: auto;
   }
-
 
   .popup_articlediv p {
     color: #344563;

@@ -3,13 +3,12 @@ const closeHamburgerBtn = document.querySelector('.close_hamburger');
 const modalMenuContainer = document.querySelector('.modal_menu_container');
 const menuOption = document.querySelectorAll('.menu_option');
 const worksSection = document.querySelector('.works_section');
-let form = document.querySelector('form');
+const form = document.querySelector('form');
 const button = document.querySelector('#btn_1');
-let message = document.querySelector('.errorMsg');
-let fName = document.querySelector('#name');
-let email = document.querySelector('#email');
-let emailValue = document.querySelector('#email').value;
-let textArea = document.querySelector('#text_message');
+const message = document.querySelector('.errorMsg');
+const fName = document.querySelector('#name');
+const email = document.querySelector('#email');
+const textArea = document.querySelector('#text_message');
 
 const cardsData = [
   {
@@ -88,19 +87,16 @@ formChangeEvents.forEach((eachField) => {
       emailKey: email.value,
       textAreaKey: textArea.value,
     };
-    console.log(formDataObject);
     localStorage.setItem('formValues', JSON.stringify(formDataObject));
   });
 });
 
 window.addEventListener('load', () => {
   const formInfo = JSON.parse(localStorage.getItem('formValues'));
-  console.log(formInfo);
   if (formInfo) {
     fName.value = formInfo.nameKey;
     email.value = formInfo.emailKey;
-    textArea.value = formInfo.textAreaKey; 
-    console.log(fName, email, textArea);
+    textArea.value = formInfo.textAreaKey;
   } else {
     fName.value = '';
     email.value = '';
@@ -108,22 +104,19 @@ window.addEventListener('load', () => {
   }
 });
 
-function validate() { 
+const validate = () => {
   const regx = /^([a-z\d-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
-  form.onsubmit = function (e) {
+  form.addEventListener('submit', (e) => {
     const formInfo = JSON.parse(localStorage.getItem('formValues'));
-    let emailAddress = formInfo.emailKey 
+    const emailAddress = formInfo.emailKey;
     if (!(regx.test(emailAddress))) {
-      message.innerHTML  = 'Enter valid email address! in lowercase, abc@gmail.com'; 
+      message.innerHTML = 'Enter valid email address! in lowercase; abc@gmail.com';
       e.preventDefault();
     }
-  };
-}
+  });
+};
 
-button.addEventListener('click', () => {
-  validate();
-});
-
+button.addEventListener('click', validate());
 let displayCard = '';
 for (let i = 0; i < cardsData.length; i += 1) {
   displayCard += `
