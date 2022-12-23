@@ -618,6 +618,14 @@ label {
   color: #172b4d50;
 }
 
+.errorMsg {
+  color: #172b4d;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+  transition: 3s;
+}
+
 .list_style {
   list-style: none;
 }
@@ -800,7 +808,7 @@ label {
     align-items: center;
     gap: 30px 10px;
     grid-column: 1;
-    grid-template-columns: 50px 45px 75px;
+    grid-template-columns: 55px 45px 75px;
     grid-template-rows: repeat(3, 10px);
   }
 
@@ -1215,7 +1223,7 @@ label {
     padding: 5px 0;
     border-radius: 20px;
   }
-  
+
   .popup_article .figure2 img {
     width: 100%;
     object-fit: cover;

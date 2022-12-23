@@ -3,12 +3,12 @@ const closeHamburgerBtn = document.querySelector('.close_hamburger');
 const modalMenuContainer = document.querySelector('.modal_menu_container');
 const menuOption = document.querySelectorAll('.menu_option');
 const worksSection = document.querySelector('.works_section');
-const form = document.querySelector('form');
+let form = document.querySelector('form');
 const button = document.querySelector('#btn_1');
-const message = document.querySelector('.errorMsg');
+let message = document.querySelector('.errorMsg');
 let fName = document.querySelector('#name');
 let email = document.querySelector('#email');
-const emailValue = document.querySelector('#email').value;
+let emailValue = document.querySelector('#email').value;
 let textArea = document.querySelector('#text_message');
 
 const cardsData = [
@@ -82,21 +82,25 @@ menuOption.forEach((e) => {
 const formChangeEvents = [fName, email, textArea];
 formChangeEvents.forEach((eachField) => {
   eachField.addEventListener('change', () => {
+    message.innerHTML = '';
     const formDataObject = {
       nameKey: fName.value,
       emailKey: email.value,
       textAreaKey: textArea.value,
     };
+    console.log(formDataObject);
     localStorage.setItem('formValues', JSON.stringify(formDataObject));
   });
 });
 
 window.addEventListener('load', () => {
   const formInfo = JSON.parse(localStorage.getItem('formValues'));
+  console.log(formInfo);
   if (formInfo) {
-    fName = formInfo.nameKey;
-    email = formInfo.emailKey;
-    textArea = formInfo.textAreaKey;
+    fName.value = formInfo.nameKey;
+    email.value = formInfo.emailKey;
+    textArea.value = formInfo.textAreaKey; 
+    console.log(fName, email, textArea);
   } else {
     fName.value = '';
     email.value = '';
@@ -104,18 +108,20 @@ window.addEventListener('load', () => {
   }
 });
 
-button.addEventListener('click', (e) => {
-  const regEx = /^([a-z0-9_\-.]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
+function validate() { 
+  const regx = /^([a-z\d-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+  form.onsubmit = function (e) {
+    const formInfo = JSON.parse(localStorage.getItem('formValues'));
+    let emailAddress = formInfo.emailKey 
+    if (!(regx.test(emailAddress))) {
+      message.innerHTML  = 'Enter valid email address! in lowercase, abc@gmail.com'; 
+      e.preventDefault();
+    }
+  };
+}
 
-  const emailMatched = emailValue.match(regEx);
-  if (emailMatched) {
-    message.innerHTML = '';
-    form.submit();
-    localStorage.removeItem('formValues');
-  } else {
-    e.preventDefault();
-    message.innerHTML = 'Enter fields correctly; email pattern in lowercase only';
-  }
+button.addEventListener('click', () => {
+  validate();
 });
 
 let displayCard = '';
