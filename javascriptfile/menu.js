@@ -91,6 +91,19 @@ formChangeEvents.forEach((eachField) => {
   });
 });
 
+
+
+let formData = {
+  fname:fName.value,
+  email:email.value,
+  textArea:textArea.value,
+}
+
+
+
+
+
+
 window.addEventListener('load', () => {
   const formInfo = JSON.parse(localStorage.getItem('formValues'));
   if (formInfo) {
