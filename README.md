@@ -46,6 +46,7 @@ Basic portfolio website
 The layout was done using css flexbox and css grid, button interactions implemented.
 Use media queries to make sure that website displays correctly on desktop screens. (Desktop: 768px or wider).
 - Implement the mobile menu using basic javascript.
+- Implement popups for both mobile and desktop screen sizes.
 
 ## 🛠 Built With <a name="built-with"></a>
 
