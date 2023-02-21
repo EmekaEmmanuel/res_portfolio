@@ -16,7 +16,7 @@ const cardsData = [
     name: ['Tonic', 'Tonic'],
     description: [
       'A daily selection of privately personalized reads; no accounts or sign-ups required. Lorem Ipsum is simply dummy text of the printing and typesetting industry. A daily selection of privately personalized reads; no accounts or sign-ups required.', 'A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.'],
-    image: ['../jumbo1.jpg', '../jumbo5.png'],
+    image: ['./jumbo1.jpg', './jumbo5.png'],
     technologies: ['html', ' css ', 'javaScript'],
     technologiesDesk: ['html', 'Ruby on rails', 'css', 'javaScript'],
     technologiesPop: ['html', ' css', 'javaScript', 'github', 'ruby', 'Bootstraps'],
@@ -29,7 +29,7 @@ const cardsData = [
     name: ['Multi-Post Stories', 'Multi-Post Stories'],
     description: [
       'A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.', 'A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.'],
-    image: ['../jumbo4.jpg', '../jumbo4b.jpg'],
+    image: ['./jumbo4.jpg', './jumbo4b.jpg'],
     technologies: ['html', ' css ', 'javaScript'],
     technologiesDesk: ['html', 'Ruby on rails', 'css', 'javaScript'],
     technologiesPop: ['html', ' css', 'javaScript', 'github', 'ruby', 'Bootstraps'],
@@ -42,7 +42,7 @@ const cardsData = [
     name: ['Tonic', 'Facebook 360'],
     description:
       ['A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.', "Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR... Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR..."],
-    image: ['../jumbo3.jpg', '../jumbo1b.png'],
+    image: ['./jumbo3.jpg', './jumbo1b.png'],
     technologies: ['html', ' css ', 'javaScript'],
     technologiesDesk: ['html', 'Ruby on rails', 'css', 'javaScript'],
     technologiesPop: ['html', ' css', 'javaScript', 'github', 'ruby', 'Bootstraps'],
@@ -55,7 +55,7 @@ const cardsData = [
     name: ['Multi-Post Stories', 'Uber Navigation'],
     description:
       ['A daily selection of privately personalized reads; no accounts or sign-ups required. A daily selection of privately personalized reads; no accounts or sign-ups required.', 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car. A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.'],
-    image: ['../jumbo4.jpg', '../jumbo2b.png'],
+    image: ['./jumbo4.jpg', './jumbo2b.png'],
     technologies: ['html', ' css ', 'javaScript'],
     technologiesDesk: ['html', 'Ruby on rails', 'css', 'javaScript'],
     technologiesPop: ['html', ' css', 'javaScript', 'github', 'ruby', 'Bootstraps'],
@@ -143,9 +143,9 @@ for (let i = 0; i < cardsData.length; i += 1) {
                 <ul>
 
                     <li><a class="textdecoration font2" href="#">CANOPY</a></li>
-                    <li><a class="textdecoration" href="#"><img src="../mid_dot.jpg" alt="mit_dot"></a></li>
+                    <li><a class="textdecoration" href="#"><img src="./mid_dot.jpg" alt="mit_dot"></a></li>
                     <li><a class="textdecoration font3" href="#">Back End Dev</a></li>
-                    <li class="textdecoration"><a href="#"><img src="../mid_dot.jpg" alt="mit_dot"></a></li>
+                    <li class="textdecoration"><a href="#"><img src="./mid_dot.jpg" alt="mit_dot"></a></li>
                     <li><a class="textdecoration font3" href="#">2015</a></li>
 
 
@@ -173,9 +173,9 @@ for (let i = 0; i < cardsData.length; i += 1) {
                 <ul class="ul1">
 
                     <li><a class="textdecoration font2" href="#">CANOPY</a></li>
-                    <li><a class="textdecoration" href="#"><img src="../mid_dot.jpg" alt=""></a></li>
+                    <li><a class="textdecoration" href="#"><img src="./mid_dot.jpg" alt=""></a></li>
                     <li><a class="textdecoration font3" href="#">Back End Dev</a></li>
-                    <li><a class="textdecoration" href="#"><img src="../mid_dot.jpg" alt=""></a></li>
+                    <li><a class="textdecoration" href="#"><img src="./mid_dot.jpg" alt=""></a></li>
                     <li><a class="textdecoration font3" href="#">2015</a></li>
 
 
@@ -221,16 +221,16 @@ showPopupBtn.forEach((e) => {
 
         <h3><a class="textdecoration font1" href="#">${cardsData[btnIndex].name[0]}</a></h3>
 
-        <button type="button" class="close_popup "><img src="../closepopup.png" alt=""></button>
+        <button type="button" class="close_popup "><img src="./closepopup.png" alt=""></button>
 
     </header>
 
     <ul class="list1">
 
         <li><a class="textdecoration font2" href="#">CANOPY</a></li>
-        <li><a class="textdecoration" href="#"><img src="../mid_dot.jpg" alt="mit_dot"></a></li>
+        <li><a class="textdecoration" href="#"><img src="./mid_dot.jpg" alt="mit_dot"></a></li>
         <li><a class="textdecoration font3" href="#">Back End Dev</a></li>
-        <li class="textdecoration"><a href="#"><img src="../mid_dot.jpg" alt="mit_dot"></a></li>
+        <li class="textdecoration"><a href="#"><img src="./mid_dot.jpg" alt="mit_dot"></a></li>
         <li><a class="textdecoration font3" href="#">2015</a></li>
 
 
@@ -257,12 +257,12 @@ showPopupBtn.forEach((e) => {
     <footer>
         <button class="footer_btn textdecoration" id="see-projects-btn" type="submit">
             <span>See Source</span>
-            <img src="../live_icon.png" alt="">
+            <img src="./live_icon.png" alt="">
         </button>
 
         <button class="footer_btn textdecoration" id="see-projects-btn" type="submit">
             <span>See Live</span>
-            <img src="../github_source.jpg" alt="">
+            <img src="./github_source.jpg" alt="">
         </button>
         
     </footer>
@@ -275,16 +275,16 @@ showPopupBtn.forEach((e) => {
 
         <h3><a class="textdecoration font1" href="#">${cardsData[btnIndex].name[0]}</a></h3>
 
-        <button type="button" class="close_popup"><img src="../closepopup.png" alt=""></button>
+        <button type="button" class="close_popup"><img src="./closepopup.png" alt=""></button>
 
     </header> 
 
     <ul class="list1 ul1">
 
         <li><a class="textdecoration font2" href="#">CANOPY</a></li>
-        <li><a class="textdecoration" href="#"><img src="../mid_dot.jpg" alt=""></a></li>
+        <li><a class="textdecoration" href="#"><img src="./mid_dot.jpg" alt=""></a></li>
         <li><a class="textdecoration font3" href="#">Back End Dev</a></li>
-        <li><a class="textdecoration" href="#"><img src="../mid_dot.jpg" alt=""></a></li>
+        <li><a class="textdecoration" href="#"><img src="./mid_dot.jpg" alt=""></a></li>
         <li><a class="textdecoration font3" href="#">2015</a></li>
 
     </ul>
@@ -314,12 +314,12 @@ showPopupBtn.forEach((e) => {
             <footer>
                 <button class="align_3 footer_btn textdecoration" id="see-projects-btn" type="submit">
                     <span>See Source</span>
-                    <img src="../live_icon.png" alt="">
+                    <img src="./live_icon.png" alt="">
                 </button>
 
                 <button class="align_3 footer_btn textdecoration" id="see-projects-btn" type="submit">
                     <span>See Live</span>
-                    <img src="../github_source.jpg" alt="">
+                    <img src="./github_source.jpg" alt="">
                 </button>
             </footer>
             
